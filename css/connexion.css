@@ -33,15 +33,15 @@ a {
 }
 
 .container {
-  width: 450px;
-  height: 30rem;
+  width: 410px;
+  height: 27rem;
   background-color: rgb(254, 86, 1);
   margin: 0 auto;
-  border-radius: 10px;
+  border-radius: 15px;
   box-shadow: 10px 10px 15px rgba(0, 0, 0, 0.718);
   border: #1a5d1a 3px solid;
   /* display: flex;
-      justify-content: center; */
+        justify-content: center; */
 }
 
 .return {
@@ -71,8 +71,7 @@ a {
 
 .element {
   display: flex;
-  /* flex-direction: column; */
-  flex-wrap: wrap;
+  flex-direction: column;
   justify-content: center;
   margin-top: 3%;
   width: 100%;
@@ -86,49 +85,25 @@ form p {
   color: white;
 }
 
-.form-nom {
-  margin: auto;
-  margin-top: 3%;
-}
-
-.form-prenom {
-  margin: auto;
-  margin-top: 3%;
-}
-
 .form-email {
-  margin: auto;
-  margin-top: 3%;
-}
-
-.form-sexe {
-  width: 160px;
   margin: auto;
   margin-top: 3%;
 }
 
 .desc {
   font-weight: bold;
-  font-size: 13px;
-  color: white;
-}
-
-.desc-confir {
-  font-weight: bold;
-  font-size: 13px;
-  width: 100%;
+  font-size: 16px;
   color: white;
 }
 
 .form-password {
   margin: auto;
-  margin-top: 3%;
+  margin-top: 7%;
 }
-.form-nom,
-.form-prenom,
+
 .form-email,
 .form-password {
-  width: 170px;
+  width: 200px;
   /* margin-left: 15%; */
   display: flex;
   flex-direction: column;
@@ -136,12 +111,8 @@ form p {
   align-items: flex-start;
 }
 
-#nom,
-#prenom,
-#sexe,
 #email,
-#password,
-#password2 {
+#password {
   width: 100%;
   height: 42px;
   border-radius: 25px;
@@ -156,20 +127,24 @@ form p {
   width: 163px;
   height: 46px;
   background-color: #1a5d1a;
-  border-radius: 24px;
   border: none;
+  border-radius: 24px;
   display: flex;
   align-items: center;
   justify-content: center;
   box-shadow: 5px 10px 10px rgba(0, 0, 0, 0.25);
   margin: auto;
-  margin-top: 3%;
+  margin-top: 8%;
+}
+
+.conn a {
   color: white;
+  text-decoration: none;
   font-size: 16px;
 }
 
 .conn:hover {
-  border: white 2px solid;
+  border: none;
   color: black;
   font-weight: bold;
   border: white solid 2px;
@@ -195,6 +170,6 @@ form p {
 /* Media query pour les écrans de petite taille (par exemple, mobile) */
 @media only screen and (max-width: 768px) {
   .container {
-    height: auto;
+    height: 25rem;
   }
 }

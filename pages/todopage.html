@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../css/todopage.css" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Poppins"
+      rel="stylesheet"
+    />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>Bienvenue <span id="nomAffiche">Mohamed</span></h1>
+    <h1><input type="button" value="Se déconnecter" id="deconnexion" /></h1>
+    <div class="container">
+      <h1>Your ToDoList</h1>
+      <form action="#!">
+        <label for="titre">Titre</label>
+        <input
+          type="text"
+          id="titre"
+          placeholder="Etrez le titre de votre tâche"
+        />
+        <label for="tache">tâche</label>
+        <input
+          type="text"
+          id="tache"
+          name="tache"
+          placeholder="Entrez votre tâche"
+        />
+        <input type="button" value="Ajouter" id="envoie" />
+        <input
+          type="button"
+          value="Mettre a jour"
+          id="Editer"
+          style="background-color: burlywood; display: none"
+        />
+      </form>
+    </div>
+
+    <table id="table">
+      <thead>
+        <tr>
+          <th>N°</th>
+          <th>Titre</th>
+          <th>Tâche</th>
+          <th>Option</th>
+        </tr>
+      </thead>
+      <tbody>
+        <!-- <tr id="01">
+          <td data-title="N°">01</td>
+          <td data-title="nom">XXXX</td>
+          <td data-title="tache">XXXX XXXX</td>
+          <td data-title="option">
+            <i class="edite" id="edite-01">Editer</i>
+            <i class="delete" id="delete-01">Supprimer</i>
+          </td>
+        </tr> -->
+      </tbody>
+    </table>
+    <script src="../js/todopage.js"></script>
+    <script src="../js/deconnexion.js"></script>
+  </body>
+</html>
