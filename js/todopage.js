@@ -41,8 +41,9 @@ function showData() {
   }
   let html = "";
 
-  toDoList.forEach((element, indice) => {
-    html += `<tr id="">
+  toDoList.find((element, indice) => {
+    if (element.userDonnee === session.email) {
+      html += `<tr id="">
           <td data-title="N°">${indice + 1}</td>
           <td data-title="nom">${element.titre}</td>
           <td data-title="tache">${element.tache}</td>
@@ -51,6 +52,7 @@ function showData() {
             <i class="delete" id="delete" onclick="setDeleteIndex(${indice})">Supprimer</i>
           </td>
         </tr>`;
+    }
   });
 
   document.querySelector("#table tbody").innerHTML = html;
@@ -120,33 +122,33 @@ function setDeleteIndex(index) {
 }
 
 function updateData(index) {
-    document.querySelector("#envoie").style.display = "none";
-    document.querySelector("#Editer").style.display = "block";
-  
-    let toDoList;
-    if (localStorage.getItem("toDoList") == null) {
-        toDoList = [];
-    } else {
-        toDoList = JSON.parse(localStorage.getItem("toDoList"));
-    }
-  
-    document.querySelector("#titre").value = toDoList[index].titre;
-    document.querySelector("#tache").value = toDoList[index].tache;
-  
-    document.querySelector("#Editer").onclick = () => {
-      if (validateForm() == true) {
-        toDoList[index].titre = document.querySelector("#titre").value;
-        toDoList[index].tache = document.querySelector("#tache").value;
-  
-        localStorage.setItem("toDoList", JSON.stringify(toDoList));
-  
-        showData();
-  
-        document.querySelector("#titre").value = "";
-        document.querySelector("#tache").value = "";
-  
-        document.querySelector("#envoie").style.display = "block";
-        document.querySelector("#Editer").style.display = "none";
-      }
-    };
+  document.querySelector("#envoie").style.display = "none";
+  document.querySelector("#Editer").style.display = "block";
+
+  let toDoList;
+  if (localStorage.getItem("toDoList") == null) {
+    toDoList = [];
+  } else {
+    toDoList = JSON.parse(localStorage.getItem("toDoList"));
   }
+
+  document.querySelector("#titre").value = toDoList[index].titre;
+  document.querySelector("#tache").value = toDoList[index].tache;
+
+  document.querySelector("#Editer").onclick = () => {
+    if (validateForm() == true) {
+      toDoList[index].titre = document.querySelector("#titre").value;
+      toDoList[index].tache = document.querySelector("#tache").value;
+
+      localStorage.setItem("toDoList", JSON.stringify(toDoList));
+
+      showData();
+
+      document.querySelector("#titre").value = "";
+      document.querySelector("#tache").value = "";
+
+      document.querySelector("#envoie").style.display = "block";
+      document.querySelector("#Editer").style.display = "none";
+    }
+  };
+}
