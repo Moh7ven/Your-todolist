@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Inscription-NoteBookCouture</title>
+    <link rel="stylesheet" href="./css/inscription.css">
+    <link
+      href="https://fonts.googleapis.com/css?family=Poppins"
+      rel="stylesheet"
+    />
+    <link rel="shortcut icon" href="../img/logo.png" />
+  </head>
+  <body>
+    <section class="principal">
+      <div class="container">
+        <div class="return">
+          <a href="../index.html">
+            <img src="../img/Arrow.png" alt="" />
+          </a>
+        </div>
+        <form>
+          <p>Inscription</p>
+          <div class="element">
+            <div class="form-nom">
+              <span class="desc">Nom</span>
+              <input id="nom" type="text" />
+            </div>
+            <div class="form-prenom">
+              <span class="desc">Prenom</span>
+              <input id="prenom" type="text" />
+            </div>
+            <div class="form-email">
+              <span class="desc">Email</span>
+              <input id="email" type="email" />
+            </div>
+            <div class="form-sexe">
+              <span class="desc">Sexe</span>
+              <select name="sexe" id="sexe">
+                <option value="">--Choisissez votre sexe svp--</option>
+                <option value="masculin">Masculin</option>
+                <option value="feminin">Feminin</option>
+              </select>
+            </div>
+            <div class="form-password">
+              <span class="desc">Mot de passe</span>
+              <input id="password" type="password" />
+            </div>
+            <div class="form-password">
+              <span class="desc-confir">Confirmer mot de passe</span>
+              <input id="password2" type="password" />
+            </div>
+          </div>
+          <p class="ins">
+            Vous avez pas déjà un compte?
+            <a href="./connexion.html">Connectez-vous</a>
+          </p>
+          <button class="conn" id="btnIns">S'inscrire</button>
+        </form>
+      </div>
+    </section>
+
+    <script src="../js/inscription.js"></script>
+  </body>
+</html>
