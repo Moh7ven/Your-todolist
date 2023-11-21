@@ -82,7 +82,7 @@ function addData() {
           window.location.href = "../index.html";
         } else {
           alert("Ce utilisateur existe déjà !");
-          window.location.reload();
+          window.location.reload(); 
         }
       });
     }
